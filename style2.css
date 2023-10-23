@@ -1,0 +1,123 @@
+:root {
+    --primary:#1E0253;
+    --violet:#8B73FF;
+    --white: #fff;
+
+    
+}
+* {
+    box-sizing: border-box;
+
+}
+body{
+    font-family: Rubik Spray Paint, sans-serif;
+    font-weight: lighter ;
+    color: var(--white);
+    background-color: #7338D2;
+    
+
+
+}
+
+.nav {
+    border-bottom: 1px solid var(--white);
+}
+
+.nav__checkbox {
+    display: none;
+}
+
+li a {
+    color: var(--primary);
+    
+    
+}
+.logo {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    margin-left: -40px;
+    margin-bottom: 10px;
+
+}
+.nombre {
+    width: 150px;
+    height: 80px;
+    position: relative;
+    left: 20px;
+    border-left:1px solid var(--white);
+    
+    
+;
+    
+}
+.nav__toggle {
+    position: absolute;
+    cursor: pointer;
+    right: 0;
+   
+    
+}
+
+.close {
+    display: none;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    right: 10px;
+    top: 31px;
+}
+.menu {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    top: 25px;
+}
+.nav__menu {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 1rem;
+}
+.nav__menu li {
+    display: none;
+    list-style-type: none;
+    color: #1E0253;
+    
+}
+.nav__menu li:first-child {
+    display: block;
+    margin-right:auto;
+}
+.nav__menu a {
+    color: inherit;
+    font-size: 1.1rem;
+    text-decoration: none;
+}
+
+#nav__checkbox:checked ~ ul.nav__menu li {
+    display: block;
+}
+#nav__checkbox:checked ~ label.nav__toggle .close {
+    display: block;
+}
+#nav__checkbox:checked ~ label.nav__toggle .menu{
+   display: none;
+   
+}
+@media only screen and (min-width:560px) {
+    .nav__toggle {
+        display: none;
+    }
+    .nav__menu {
+        flex-direction: row;
+
+    }
+    .nav__menu li {
+        display:block
+    }
+}
+
+   
+
